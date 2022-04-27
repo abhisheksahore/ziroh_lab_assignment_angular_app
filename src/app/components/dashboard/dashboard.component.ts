@@ -29,8 +29,6 @@ export class DashboardComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-    console.log(this.lastElementRef.changes);
-    console.log(typeof this.lastElementRef.last);
     this.lastElementRef.changes.subscribe(element => {
       if (element.last) {
         this.observer.observe(element.last.nativeElement)
@@ -45,7 +43,6 @@ export class DashboardComponent implements OnInit, AfterViewInit {
     if (this.albumID <= 10) {
       this.api.GetData(`https://jsonplaceholder.typicode.com/albums/${this.albumID}/photos`).toPromise().then(data => {
         this.photos = [...this.photos, ...data]
-        console.log(this.photos)
           this.albumID += 1;
       })
     }
@@ -63,7 +60,6 @@ export class DashboardComponent implements OnInit, AfterViewInit {
   
 
   deletePhoto(id: number) {
-    console.log(id)
     this.filterPhotoWithId(id);
   }
 

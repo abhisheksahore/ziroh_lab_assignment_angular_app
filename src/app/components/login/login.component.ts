@@ -28,14 +28,12 @@ export class LoginComponent implements OnInit {
     if (name === "password") {
       this.password = e.target.value;
     }
-    console.log(e.target.value)
   }
 
 
   login() {
     this.error = ''
     if (!/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(this.email)) {
-      console.log(this.email);
       this.error = "invalid email!";
       return
     }
@@ -47,7 +45,6 @@ export class LoginComponent implements OnInit {
       headers: {"content-type": "application/json"}
     }
     ).subscribe(data => {
-      console.log(data)
       localStorage.setItem('name', data.data.name)
       localStorage.setItem('email', data.data.email)
       this.router.navigate(['/dashboard']);

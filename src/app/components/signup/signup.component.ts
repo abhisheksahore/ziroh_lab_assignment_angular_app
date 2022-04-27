@@ -26,10 +26,8 @@ export class SignupComponent implements OnInit {
   public userDetails:any;
 
   signup() {
-    console.log("clicked")
     this.error = ''
     if (!/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(this.email)) {
-      console.log(this.email);
       this.error = "invalid email!";
       return
     }
@@ -41,7 +39,6 @@ export class SignupComponent implements OnInit {
       headers:{'content-type': 'application/json'}
     }).subscribe(data => {
       this.userDetails = data.data
-      console.log(this.userDetails)
       localStorage.setItem("email", this.userDetails.email)
       localStorage.setItem("name", this.userDetails.name)
       this.router.navigate(["/dashboard"])
