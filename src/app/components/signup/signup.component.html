@@ -1,0 +1,32 @@
+<div class="login-form-container">
+    <div class="login-form-wrapper">
+        <div class="login-form">
+            <div class="login-form-heading">
+                Create Account
+            </div>
+            <div class="login-form-body">
+                <div class="input-wrapper">
+                    <label for="email">Email</label>
+                    <input id="email" type="text" placeholder="abhisheksahore7@gmail.com" [value]="email" (change)="addValue($event, 'email')">
+                </div>
+                <div class="input-wrapper">
+                    <label for="name">Name</label>
+                    <input id="name" type="text" placeholder="Abhishek Sahore" [value]="name" (change)="addValue($event, 'name')">
+                </div>
+                <div class="input-wrapper">
+                    <label for="passsword">Password</label>
+                    <input id="password" type="password" placeholder="#ab123Sah456@" [value]="password" (change)="addValue($event, 'password')">
+                </div>
+                <div class="submit" (click)="signup()">
+                    Sign Up
+                </div>
+                <div *ngIf="error!==''" class="error">
+                    {{error}}
+                </div>
+            </div>
+            <div class="signup-instead">
+                <div>Already have an account? <a routerLink="/login"><span>Sign In</span></a></div>
+            </div>
+        </div>
+    </div>
+</div>

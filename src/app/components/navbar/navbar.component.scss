@@ -1,0 +1,44 @@
+@import "navbarVariables";
+
+.navbar-container {
+    display: flex;
+    padding: 2rem 4rem;
+    justify-content: space-between;
+    color: white;
+    background-color: $navbarBackgorundColor;
+
+    .navbar-wrapper {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+
+        .logo {
+            font-size: 3rem;
+            font-weight: 600;
+        }
+
+        .name {
+            font-size: 1.75rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            display: flex;
+            align-items: center;
+        }
+    
+        .logout {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: .7rem 1.5rem;
+            font-size: 1.2rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            background-color: $primaryColor;
+            border-radius: .5rem;
+            cursor: pointer;
+        }
+    }
+}

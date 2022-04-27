@@ -1,0 +1,39 @@
+<app-navbar></app-navbar>
+<div class="dashboard-container">
+    <div class="photo-container">
+        <div *ngFor="let photo of photos; let i = index; let last = last">
+            <div *ngIf="last; else notLastElement">
+                <div class="photo-element-container" #lastElementRef>
+                    <div class="photo-wrapper">
+                        <div class="primary-info">
+                            <div>{{photo.id}}</div>
+                            <div>
+                                <a href={{photo.url}} target="_blank"><img src={{photo.thumbnailUrl}} alt=""></a>
+                            </div>
+                        </div>
+                        <div class="photo-description">{{photo.title}}</div>
+                        <div class="deleteBtn" (click)="deletePhoto(photo.id)">
+                            Delete
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <ng-template #notLastElement>
+                <div class="photo-element-container">
+                    <div class="photo-wrapper">
+                        <div class="primary-info">
+                            <div>{{photo.id}}</div>
+                            <div>
+                                <a href={{photo.url}} target="_blank"><img src={{photo.thumbnailUrl}} alt=""></a>
+                            </div>
+                        </div>
+                        <div class="photo-description">{{photo.title}}</div>
+                        <div class="deleteBtn" (click)="deletePhoto(photo.id)">
+                            Delete
+                        </div>
+                    </div>
+                </div>
+            </ng-template>
+        </div>
+    </div>
+</div>

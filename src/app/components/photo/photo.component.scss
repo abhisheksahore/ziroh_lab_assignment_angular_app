@@ -1,0 +1,37 @@
+@mixin displayFlex($justifyContent, $alignItems, $flexDirection) {
+    display: flex;
+    justify-content: $justifyContent;
+    align-items: $alignItems;
+    flex-direction: $flexDirection;
+}
+
+.photo-element-container {
+    @include displayFlex(space-between, center, row);
+    color: white;
+    border: 1px solid rgb(78, 78, 78);
+    padding: 1rem;
+    font-size: 1.1rem;
+    
+    .photo-wrapper {
+        @include displayFlex(space-between, center, row);
+        gap: 2rem;
+        
+        .primary-info {
+            @include displayFlex(center, center, row);
+            gap: 2rem;
+        }
+
+        img {
+            width: 8rem;
+            border-radius: .5rem;
+        }
+        .photo-description {
+            // text-align: justify;
+            letter-spacing: .5px;
+        }
+    }
+}
+
+.redBackground {
+    background-color: red;
+}

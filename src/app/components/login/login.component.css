@@ -1,0 +1,119 @@
+.login-form-container {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.login-form-container .login-form-wrapper {
+  max-width: 50rem;
+  width: 35rem;
+  font-size: 1.5rem;
+}
+
+.login-form-container .login-form-wrapper .login-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: white;
+  letter-spacing: 1px;
+  gap: 5rem;
+}
+
+.login-form-container .login-form-wrapper .login-form .login-form-heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 600;
+  font-size: 3rem;
+  letter-spacing: 2px;
+}
+
+.login-form-container .login-form-wrapper .login-form .login-form-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2rem;
+}
+
+.login-form-container .login-form-wrapper .login-form .input-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+}
+
+.login-form-container .login-form-wrapper .login-form .input-wrapper input {
+  padding: .8rem;
+}
+
+.login-form-container .login-form-wrapper .login-form .submit {
+  padding: 1rem 2rem;
+  background-color: #6AA354;
+  border-radius: .5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  font-weight: 500;
+  margin-top: 2rem;
+}
+
+.login-form-container .login-form-wrapper .login-form .error {
+  color: #FE3D71;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.login-form-container .login-form-wrapper .login-form .signup-instead {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.login-form-container .login-form-wrapper .login-form .signup-instead a {
+  text-decoration: none;
+}
+
+.login-form-container .login-form-wrapper .login-form .signup-instead span {
+  color: #6AA354;
+  font-weight: 700;
+  margin-left: 1rem;
+}
+/*# sourceMappingURL=login.component.css.map */

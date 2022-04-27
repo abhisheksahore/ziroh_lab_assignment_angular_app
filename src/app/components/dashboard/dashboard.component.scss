@@ -1,0 +1,64 @@
+@import "dashboardVariables";
+
+@mixin displayFlex($justifyContent, $alignItems, $flexDirection) {
+    display: flex;
+    justify-content: $justifyContent;
+    align-items: $alignItems;
+    flex-direction: $flexDirection;
+}
+
+.dashboard-container {
+    width: 100%;
+}
+
+.photo-container {
+    padding: 2rem;
+    max-width: 1000px;
+    margin-top: 10rem;
+    margin-left: auto;
+    margin-right: auto;
+
+
+    .photo-element-container {
+        @include displayFlex(space-between, center, row);
+        color: white;
+        border: 1px solid rgb(78, 78, 78);
+        padding: 1rem;
+        font-size: 1.1rem;
+        
+        .photo-wrapper {
+            @include displayFlex(space-between, center, row);
+            gap: 2rem;
+            width: 100%;
+            
+            .primary-info {
+                @include displayFlex(center, center, row);
+                gap: 2rem;
+            }
+    
+            img {
+                width: 8rem;
+                border-radius: .5rem;
+            }
+            .photo-description {
+                // text-align: justify;
+                width: 100%;
+                letter-spacing: .5px;
+                font-size: 1.4rem;
+            }
+            .deleteBtn {
+                padding: .5rem .75rem;
+                background-color: #FC3C45;
+                border-radius: .4rem;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+
+@media (min-width: 600px) {
+    .photo-container {
+        padding: 5rem;
+    }
+}

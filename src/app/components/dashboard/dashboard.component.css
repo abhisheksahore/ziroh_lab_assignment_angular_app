@@ -1,0 +1,91 @@
+.dashboard-container {
+  width: 100%;
+}
+
+.photo-container {
+  padding: 2rem;
+  max-width: 1000px;
+  margin-top: 10rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.photo-container .photo-element-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  color: white;
+  border: 1px solid #4e4e4e;
+  padding: 1rem;
+  font-size: 1.1rem;
+}
+
+.photo-container .photo-element-container .photo-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 2rem;
+  width: 100%;
+}
+
+.photo-container .photo-element-container .photo-wrapper .primary-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 2rem;
+}
+
+.photo-container .photo-element-container .photo-wrapper img {
+  width: 8rem;
+  border-radius: .5rem;
+}
+
+.photo-container .photo-element-container .photo-wrapper .photo-description {
+  width: 100%;
+  letter-spacing: .5px;
+  font-size: 1.4rem;
+}
+
+.photo-container .photo-element-container .photo-wrapper .deleteBtn {
+  padding: .5rem .75rem;
+  background-color: #FC3C45;
+  border-radius: .4rem;
+  cursor: pointer;
+}
+
+@media (min-width: 600px) {
+  .photo-container {
+    padding: 5rem;
+  }
+}
+/*# sourceMappingURL=dashboard.component.css.map */
