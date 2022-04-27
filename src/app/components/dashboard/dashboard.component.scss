@@ -62,3 +62,26 @@
         padding: 5rem;
     }
 }
+
+@media (min-width: 300px) and (max-width: 360px) {
+
+    .photo-container {    
+    
+        .photo-element-container {
+            
+            .photo-wrapper {
+                gap: 1.25rem;
+
+                .primary-info {
+                    @include displayFlex(center, center, row);
+                    gap: 1.25rem;
+                }
+
+                img {
+                    width: 6rem;
+                    border-radius: .5rem;
+                }
+            }
+        }
+    }
+}
